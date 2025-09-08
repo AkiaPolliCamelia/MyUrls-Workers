@@ -7,9 +7,9 @@ export async function onRequest(context) {
     const request = context.request;
     const indexPageUrl = new URL('/index.html', request.url);
     // 功能启用，返回原始主页
-    return fetch(indexPageUrl);
+    return fetch(indexPageUrl.toString());
   } else {
-    // 3. 如果重定向未启用，则 /link 路径无效，返回 404
+    // 3. 如果重定向未启用，则 /myurls 路径无效，返回 404
     return new Response('Not Found', { status: 404 });
   }
 }

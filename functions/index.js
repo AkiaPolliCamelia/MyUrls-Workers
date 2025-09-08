@@ -5,5 +5,5 @@ export async function onRequest(context) {
   }
   const request = context.request;
   const indexPageUrl = new URL('/index.html', request.url);
-  return fetch(indexPageUrl);
+  return fetch(indexPageUrl.toString());
 }
