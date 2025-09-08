@@ -4,7 +4,7 @@ export async function onRequest(context) {
 
     // CORS 头部配置
     const corsHeaders = {
-        'Access-Control-Allow-Origin': 'sub-web-modify-lfz.pages.dev', // 允许任意来源（你可以替换为指定的域名以限制来源）
+        'Access-Control-Allow-Origin': '*', // 允许任意来源（你可以替换为指定的域名以限制来源）
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', // 允许的方法
         'Access-Control-Allow-Headers': 'Content-Type', // 允许的自定义头部
         'Content-Type': 'application/json' // 默认的响应类型
