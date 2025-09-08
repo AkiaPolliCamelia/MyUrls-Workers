@@ -3,5 +3,7 @@ export async function onRequest(context) {
   if (redirectUrl) {
     return Response.redirect(redirectUrl, 302);
   }
-  return await context.next();
+  const request = context.request;
+  const indexPageUrl = new URL('/index.html', request.url);
+  return fetch(indexPageUrl);
 }
