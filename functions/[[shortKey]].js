@@ -1,4 +1,4 @@
-// functions/[shortKey].js
+// functions/[[shortKey]].js
 export async function onRequest(context) {
   const { request, env, params } = context;
   const kv = env.LINKS;  // 假设你有一个名为 LINKS 的 KV 命名空间
